@@ -3,19 +3,17 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
-  background-color: #2b2b2b;
+  background-color: #000028;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'IBM Plex Mono', serif;
+  font-family: var(--main-font), serif;
 }
 
 .header {
   height: 100vh;
   min-height: 668px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
   position: relative;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
@@ -43,25 +41,25 @@
 }
 
 .decorated-zone::before {
-    content: "";
-    position: absolute;
-    width: 20px; 
-    height: 20px;
-    top: 0;
-    right: 0;
-    border-top: 1px solid var(--decorated-zone-color);
-    border-right: 1px solid var(--decorated-zone-color);
+  content: "";
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  top: 0;
+  right: 0;
+  border-top: 1px solid var(--decorated-zone-color);
+  border-right: 1px solid var(--decorated-zone-color);
 }
 
 .decorated-zone::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    bottom: 0;
-    left: 0;
-    border-bottom: 1px solid var(--decorated-zone-color);
-    border-left: 1px solid var(--decorated-zone-color);
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--decorated-zone-color);
+  border-left: 1px solid var(--decorated-zone-color);
 }
 
 .header__theme-menu {
@@ -84,7 +82,6 @@
 }
 
 .header__theme-menu-item:hover {
-  /* border: 1px solid var(--accent-color); */
 }
 
 .header__theme-menu-item .header__theme-menu-button {
@@ -100,6 +97,23 @@
   line-height: 82.5%;
   color: var(--header-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
+  /* align-self: center;
+  justify-self: center; */
+}
+
+/* РАЗОБРАТЬСЯ С ПЕРЕНОСОМ СТРОК И СДЕЛАТЬ */
+.header__subtitle {
+  font-size: 18px;
+  color: #000028;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  line-height: 23px;
+  margin: 0 10px 66px 10px;
+  padding: 0;
+}
+
+.content {
+  background-color: var(--background-color);
 }
 
 @media (max-width: 768px) {
