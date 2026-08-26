@@ -7,4 +7,103 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'IBM Plex Mono', serif;
+}
+
+.header {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+
+}
+
+.header__decoration {
+  color: var(--rec-color);
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  pointer-events: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header__decoration::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--rec-color);
+  box-shadow: 0px 0px 4px 2px var(--rec-color);
+  margin: 9px 0 2px 10px;
+}
+
+.decorated-zone::before {
+    content: "";
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    top: 0;
+    right: 0;
+    border-top: 1px solid var(--decorated-zone-color);
+    border-right: 1px solid var(--decorated-zone-color);
+}
+
+.decorated-zone::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid var(--decorated-zone-color);
+    border-left: 1px solid var(--decorated-zone-color);
+}
+
+.header__theme-menu {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--accent-color);
+  align-self: center;
+  justify-self: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  
+}
+
+.header__theme-menu-item:hover {
+  /* border: 1px solid var(--accent-color); */
+}
+
+.header__theme-menu-item .header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--header-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
