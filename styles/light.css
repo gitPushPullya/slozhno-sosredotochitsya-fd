@@ -10,6 +10,10 @@
   --accent-color: #FF8DCB;
   --rec-color: transparent;
   --decorated-zone-color: #353430;
+  --main-title-color: #353430;
+  --subtitle-text-color: #353430;
+  --subtitle-background-color: #FF8DCB;
+  --main-text-color: #353430;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,

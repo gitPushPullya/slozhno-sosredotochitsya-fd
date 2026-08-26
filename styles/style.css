@@ -104,8 +104,8 @@
 /* РАЗОБРАТЬСЯ С ПЕРЕНОСОМ СТРОК И СДЕЛАТЬ */
 .header__subtitle {
   font-size: 18px;
-  color: #000028;
-  background-color: var(--accent-color);
+  color: var(--subtitle-text-color);
+  background-color: var(--subtitle-background-color);
   font-weight: 700;
   line-height: 23px;
   margin: 0 10px 66px 10px;
@@ -114,7 +114,23 @@
 
 .content {
   background-color: var(--background-color);
+  display: grid;
+  gap: 50px;
+  margin-block-start: 40px;
 }
+
+.main__title {
+  color: var(--main-title-color);
+}
+
+.main__subtitle {
+  color: var(--subtitle-text-color);
+  background-color: var(--subtitle-background-color);
+}
+.main__text {
+  color: var(--main-text-color);
+}
+
 
 @media (max-width: 768px) {
   .header__title {
