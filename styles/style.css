@@ -1,4 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@import "variables.css"; 
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
@@ -8,15 +9,16 @@
   background-size: cover;
   background-attachment: fixed;
   font-family: var(--main-font), serif;
+  font-size: 18px;
 }
 
 .header {
   height: 100vh;
   min-height: 668px;
   display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   position: relative;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-
 }
 
 .header__decoration {
@@ -29,6 +31,8 @@
   line-height: 25px;
 }
 
+
+/* ПЕРЕПИСАТЬ В MEDIA СТИЛЬ ДЛЯ СВЕТЛОЙ ТЕМЫ */
 .header__decoration::after {
   content: '';
   display: inline-block;
@@ -45,10 +49,10 @@
   position: absolute;
   width: 20px; 
   height: 20px;
-  top: 0;
-  right: 0;
-  border-top: 1px solid var(--decorated-zone-color);
-  border-right: 1px solid var(--decorated-zone-color);
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
 }
 
 .decorated-zone::after {
@@ -56,10 +60,10 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid var(--decorated-zone-color);
-  border-left: 1px solid var(--decorated-zone-color);
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
 }
 
 .header__theme-menu {
@@ -68,7 +72,8 @@
   line-height: 18px;
   color: var(--accent-color);
   align-self: center;
-  justify-self: center;
+  justify-self: right;
+  margin: 0 10px 0 0;
 }
 
 .header__theme-menu-list {
@@ -77,18 +82,10 @@
   gap: 10px;
 }
 
-.header__theme-menu-item {
-  
-}
-
-.header__theme-menu-item:hover {
-}
-
 .header__theme-menu-item .header__theme-menu-button {
   background-color: transparent;
   border: none;
   text-transform: lowercase;
-
 }
 
 .header__title {
@@ -97,38 +94,67 @@
   line-height: 82.5%;
   color: var(--header-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  /* align-self: center;
-  justify-self: center; */
+  align-self: center;
+  justify-self: center;
 }
 
 /* РАЗОБРАТЬСЯ С ПЕРЕНОСОМ СТРОК И СДЕЛАТЬ */
 .header__subtitle {
   font-size: 18px;
   color: var(--subtitle-text-color);
-  background-color: var(--subtitle-background-color);
+  background-color: var(--accent-color);
   font-weight: 700;
   line-height: 23px;
   margin: 0 10px 66px 10px;
   padding: 0;
+  align-self: end;
+  justify-self: start;
+  
 }
 
 .content {
   background-color: var(--background-color);
   display: grid;
-  gap: 50px;
-  margin-block-start: 40px;
+  gap: 40px;
+  padding: 40px 10px;
 }
 
 .main__title {
-  color: var(--main-title-color);
+  color: var(--accent-color);
+  font-weight: 700;
 }
 
 .main__subtitle {
   color: var(--subtitle-text-color);
-  background-color: var(--subtitle-background-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  margin: 20px 0 10px 0;
 }
 .main__text {
   color: var(--main-text-color);
+  font-weight: 400;
+  /* margin: 0 0 20px 0; */
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery img {
+  display: block;
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  position: relative;
+  background-color: var(--background-color);
 }
 
 

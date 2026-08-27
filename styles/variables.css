@@ -5,4 +5,21 @@
 :root {
   --main-font: 'IBM Plex Mono';
   --h1-size: 45px;
+  --background-image: url("../images/cover-image-dark.png");
+  --header-title-color: #DB00FF;
+  --accent-color: #FF0070;
+  --rec-color: #FF0070;
+  --background-color: #000028;
+  --subtitle-text-color: #000028;
+  --main-text-color: #F1B2CE;
+}
+
+
+.theme-light {
+  --background-image: url("../images/cover-image-light.png");
+  --header-title-color: #FFC2E6;
+  --accent-color: #FF8DCB;
+  --rec-color: transparent;
+  --subtitle-text-color: #353430;
+  --main-text-color: #353430;
 }
