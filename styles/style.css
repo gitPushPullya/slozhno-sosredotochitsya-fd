@@ -107,6 +107,10 @@
   border: 1px solid var(--accent-color);
 }
 
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
 /* Заголовок сместился немного влево */
 .header__title {
   font-weight: 700;
@@ -211,8 +215,120 @@
   justify-self: center;
 }
 
-@media (max-width: 768px) {
+@media (width >= 768px) {
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .gallery img { 
+    inline-size: 100%;
+    block-size: 100%;
+    max-block-size: 100%;
+    object-fit: cover;
+  }
+
+  /*Пейзаж на закате*/
+  .gallery img:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  /*Десерт*/
+  .gallery img:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  /*Кассета*/
+  .gallery img:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  /*Стопка книг*/
+  .gallery img:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /*Улица*/
+  .gallery img:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .intro:nth-child(1) {
+    grid-column: 1;
+  }
+
+  .intro:nth-child(2) {
+    grid-column: 2;
+  }
+
+  .tips {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .tips:nth-child(1) {
+    grid-column: 1;
+  }
+
+  .tips:nth-child(2) {
+    grid-column: 2;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .factors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, mincontent(), 1fr);
+    gap: 20px;
+  }
+
+  .factors .factors__title:nth-child(1) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .factors .factors__content:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .factors .factors__content:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .factors .factors__content:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
   }
 }
