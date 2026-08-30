@@ -1,23 +1,26 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 
 :root.theme-light {
   --background-image: url("../images/cover-image-light.png");
-  --header-title-color: #FFC2E6;
+  --header-title-color: #ffc2e6;
   --accent-color: #353430;
-  --text-decor: #FF8DCB;
-  --accent-color-hover: #32312D66;
+  --accent-color-hover: rgb(50, 49, 45, 0.6);
   --rec-color: transparent;
   --background-color: #ffeef6;
   --subtitle-text-color: #353430;
-  --main-text-color: #353430;
+  --text-color: #353430;
+  --text-decor: #ff8dcb;
 }
 
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image: url("../images/cover-image-light.png");
+    --header-title-color: #ffc2e6;
+    --accent-color: #353430;
+    --accent-color-hover: rgb(50, 49, 45, 0.6);
+    --rec-color: transparent;
+    --background-color: #ffeef6;
+    --subtitle-text-color: #353430;
+    --text-color: #353430;
+    --text-decor: #ff8dcb;
+  }
+}
