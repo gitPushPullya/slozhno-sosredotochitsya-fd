@@ -13,16 +13,7 @@
   --background-color: #000028;
   --subtitle-text-color: #000028;
   --main-text-color: #F1B2CE;
+  --text-decor: #FF0070;
 }
 
 
-.theme-light {
-  --background-image: url("../images/cover-image-light.png");
-  --header-title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
-  --accent-color-hover: #32312D66;
-  --rec-color: transparent;
-  --background-color: #f4e6ee;
-  --subtitle-text-color: #353430;
-  --main-text-color: #353430;
-}
