@@ -3,7 +3,8 @@
 
 .page {
   font-family: var(--main-font), serif;
-  font-size: 18px;
+  font-size: var(--text-size);
+  line-height: 23.4px;
   background-color: var(--background-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
@@ -92,6 +93,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
+  margin: 0 0 0 20px;
 }
 
 .header__theme-menu-list {
@@ -104,7 +106,7 @@
   justify-self: center;
   align-self: center;
   border: none;
-  padding: 1.5px 13px;
+  padding: 1.5px 13px 4px;
   text-align: center;
   text-transform: lowercase;
   background-color: transparent;
@@ -155,7 +157,7 @@
 
 .content {
   display: grid;
-  gap: 40px;
+  gap: 50px;
   padding: 40px 10px;
   background-color: var(--background-color);
 }
@@ -185,6 +187,10 @@
 
 .subtitle__decorated {
   font-weight: 400;
+}
+
+.gallery__subtitle-decor {
+  margin: 0 0 10px 0;
 }
 
 .gallery {
@@ -238,6 +244,7 @@
   .header {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 20px 20px 0;
+    min-height: 1024px;
   }
 
   .header__theme-menu,
@@ -257,11 +264,15 @@
 
   .content {
     gap: 60px;
-    padding: 40px 20px;
+    padding: 40px 20px 60px;
   }
 
   .section__title {
     padding: 20px 0 0 0;
+  }
+
+  .gallery__subtitle-decor {
+    margin: 20px 0 20px 0;
   }
 
   .gallery {
@@ -313,15 +324,14 @@
 
   .intro {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    grid-template-columns: 0.9fr 1.9fr;
+    gap: 30px;
   }
 
   .factors {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.9fr 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
-    gap: 20px;
   }
 
   .factors .section__title:nth-child(1) {
@@ -346,12 +356,20 @@
 
   .tips {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1.9fr;
+    gap: 10px;
+  }
+
+  .footer {
+    min-height: 1024px;
   }
 }
 
 @media (width >= 1024px) {
+
+  .header {
+    min-height: 768px;
+  }
 
   .header__theme-menu {
     justify-self: center;
@@ -368,6 +386,13 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .factors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    column-gap: 20px;
   }
 
   .factors .section__title:nth-child(1) {
@@ -388,5 +413,15 @@
   .factors .factors__content:nth-child(4) {
     grid-column: 3;
     grid-row: 2;
+  }
+
+  .footer {
+    min-height: 768px;
+  }
+
+  .tips {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
   }
 }
