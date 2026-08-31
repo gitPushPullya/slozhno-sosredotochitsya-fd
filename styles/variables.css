@@ -4,17 +4,17 @@
   --background-image: url("../images/cover-image-dark.png");
   --header-title-color: #db00ff;
   --accent-color: #ff0070;
-  --accent-color-hover: rgba(255, 0, 112, 0.6);
+  --accent-color-hover: rgba(255, 0, 112, 0.4);
   --rec-color: #ff0070;
   --background-color: #000028;
   --subtitle-text-color: #000028;
   --text-color: #f1b2cE;
   --text-decor: #ff0070;
   --text-size: 18px;
-  --h2-size: 18px;
-  --h2-color: var(--accent-color);
-  --h3-size: 18px;
-  --h3-color: var(--subtitle-text-color);
+  --section-title: 18px;
+  --section-title-color: var(--accent-color);
+  --article-title: 18px;
+  --article-title-color: var(--subtitle-text-color);
 }
 
 
